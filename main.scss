@@ -1,6 +1,32 @@
 @import "reset.scss";
 @import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;700&display=swap");
 
+$button-hovered: #d88a02;
+@mixin button-default {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 15px 30px;
+  gap: 10px;
+  width: 141px;
+  height: 49px;
+  left: 1233px;
+  top: 32px;
+  border: none;
+  background: #f59b00;
+  border-radius: 5px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 120%;
+  color: #ffffff;
+  opacity: 1;
+  cursor: pointer;
+  &:hover {
+    background-color: $button-hovered;
+  }
+}
+
 body {
   font-family: "Poppins", sans-serif;
   font-style: normal;
@@ -63,6 +89,9 @@ body {
     opacity: 1;
     cursor: pointer;
   }
+  .links li:last-child:hover {
+    background: $button-hovered;
+  }
 }
 
 .hero__area-content {
@@ -119,6 +148,9 @@ body {
       border: none;
       cursor: pointer;
     }
+    .btn:hover {
+      background-color: $button-hovered;
+    }
     .cta {
       position: inherit;
       right: 50%;
@@ -131,7 +163,7 @@ body {
   .hero__area-right {
     position: relative;
     .images {
-      background: url("./img/background\ image.png") no-repeat;
+      background: url("/background\ image.png") no-repeat;
       position: absolute;
       width: 849px;
       height: 565px;
@@ -202,19 +234,19 @@ body {
 .abouts {
   display: flex;
   align-items: center;
+  margin-bottom: 130px;
   & .abouts__left {
     position: relative;
-    border: 1px solid red;
     width: 829.22px;
     height: 646px;
-    background: url("./img/abouts/background.png");
+    background: url("./abouts/Vector.png");
     & .front {
       position: absolute;
-      border: 1px solid red;
       width: 344px;
       height: 492px;
-      left: 321px;
-      top: 129px;
+      left: 322px;
+      transform: scale(1.2);
+      top: 95px;
       z-index: 1;
       filter: drop-shadow(0px 10px 45px rgba(47, 47, 47, 0.15));
     }
@@ -222,7 +254,6 @@ body {
     & .back1 {
       position: absolute;
       width: 238px;
-      border: 1px solid red;
       top: 25%;
       left: 575px;
       height: 343px;
@@ -234,7 +265,6 @@ body {
       width: 238px;
       top: 25%;
       left: 199px;
-      border: 1px solid red;
       height: 343px;
       z-index: 0;
     }
@@ -242,7 +272,6 @@ body {
   & .abouts__right {
     margin-left: 83px;
     width: 460px;
-    border: 1px solid red;
     height: 355px;
     .subheading {
       font-weight: 500;
@@ -289,6 +318,309 @@ body {
       opacity: 1;
       border: none;
       cursor: pointer;
+      &:hover {
+        background-color: $button-hovered;
+      }
     }
   }
 }
+
+.our-product {
+  border: 1px solid red;
+  margin-bottom: 130px;
+  .product-wrapper {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  & .heading {
+    font-weight: 700;
+    font-size: 31px;
+    line-height: 140%;
+    text-transform: capitalize;
+    color: #2f2f2f;
+    margin-bottom: 25px;
+  }
+  & .paragraph {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 160%;
+    text-align: center;
+    text-transform: capitalize;
+    color: #2f2f2f;
+    opacity: 0.9;
+    margin-bottom: 60px;
+  }
+  & .products {
+    margin-bottom: 122px;
+    height: 700.77px;
+    width: 1146px;
+    gap: 28px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  }
+  & .product-1 {
+    position: relative;
+    width: 264px;
+    height: 273px;
+    background: #ffe1e8;
+    border: 2px solid #fdeef1;
+    border-radius: 10px;
+    cursor: pointer;
+    img {
+      position: absolute;
+      top: 15px;
+      pointer-events: none;
+    }
+    &:hover {
+      border: 1px solid blue;
+    }
+  }
+  & .product-2 {
+    width: 264px;
+    height: 273px;
+    background: #ffe1e8;
+    border: 2px solid #fdeef1;
+    border-radius: 10px;
+    position: relative;
+    cursor: pointer;
+    img {
+      position: absolute;
+      top: 15px;
+      pointer-events: none;
+    }
+    &:hover {
+      border: 1px solid blue;
+    }
+  }
+  & .product-3 {
+    width: 264px;
+    height: 273px;
+    background: #f9dcff;
+    border: 2px solid #fdeef1;
+    border-radius: 10px;
+    position: relative;
+    cursor: pointer;
+    img {
+      position: absolute;
+      top: 15px;
+      pointer-events: none;
+    }
+    &:hover {
+      border: 1px solid blue;
+    }
+  }
+  & .product-4 {
+    width: 264px;
+    height: 273px;
+    background: #ffdee7;
+    border: 2px solid #fdeef1;
+    border-radius: 10px;
+    position: relative;
+    cursor: pointer;
+    img {
+      position: absolute;
+      top: 15px;
+      pointer-events: none;
+    }
+    &:hover {
+      border: 1px solid blue;
+    }
+  }
+  & .product-5 {
+    width: 264px;
+    height: 273px;
+    background: #ecf1ff;
+    border: 2px solid #fdeef1;
+    border-radius: 10px;
+    position: relative;
+    cursor: pointer;
+    img {
+      position: absolute;
+      top: 15px;
+      pointer-events: none;
+    }
+    &:hover {
+      border: 1px solid blue;
+    }
+  }
+  & .product-6 {
+    width: 264px;
+    height: 273px;
+    background: #fadade;
+    border: 2px solid #fdeef1;
+    border-radius: 10px;
+    position: relative;
+    cursor: pointer;
+    img {
+      position: absolute;
+      top: 15px;
+      pointer-events: none;
+    }
+    &:hover {
+      border: 1px solid blue;
+    }
+  }
+  & .product-7 {
+    width: 264px;
+    height: 273px;
+    background: #d9e6fe;
+    border: 2px solid #fdeef1;
+    border-radius: 10px;
+    position: relative;
+    cursor: pointer;
+    img {
+      position: absolute;
+      top: 15px;
+      pointer-events: none;
+    }
+    &:hover {
+      border: 1px solid blue;
+    }
+  }
+  & .product-8 {
+    width: 264px;
+    height: 273px;
+    background: #ebf4bf;
+    border: 2px solid #fdeef1;
+    border-radius: 10px;
+    position: relative;
+    cursor: pointer;
+    img {
+      position: absolute;
+      top: 15px;
+      pointer-events: none;
+    }
+    &:hover {
+      border: 1px solid blue;
+    }
+  }
+  & .btn {
+    position: relative;
+    padding: 15px 30px;
+    width: 170px;
+    height: 49px;
+    background-color: inherit;
+    border: 1px solid rgba(245, 155, 0, 0.2);
+    border-radius: 5px;
+    text-transform: capitalize;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 120%;
+    text-transform: capitalize;
+    color: #f59b00;
+    cursor: pointer;
+    &:hover {
+      background-color: #d2d2d2;
+    }
+    &::after {
+      position: absolute;
+      content: "→";
+      padding-left: 5px;
+      display: inline-block;
+      color: #f59b00;
+      font-size: 15px;
+    }
+  }
+}
+
+.cta {
+  display: flex;
+  & .cta-left {
+    width: 492px;
+    height: 549px;
+  }
+  & .cta-right {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 654px;
+    height: 549px;
+    border: 1px solid red;
+    background-color: grey;
+    & .cta-right-wrapper {
+      width: 514px;
+      border: 1px solid red;
+      & .heading {
+        border: 1px solid red;
+        font-weight: 700;
+        font-size: 31px;
+        line-height: 140%;
+        text-transform: capitalize;
+        color: #ffffff;
+        margin-bottom: 44px;
+      }
+      & .name {
+        display: inline-block;
+        margin-right: 50px;
+        opacity: 0.25;
+        width: 232px;
+        height: 54px;
+        border: 1px solid #ffffff;
+        border-radius: 10px;
+        &::placeholder {
+          padding-left: 30px;
+          font-weight: 400;
+          font-size: 16px;
+          line-height: 120%;
+          text-transform: capitalize;
+          color: #4c2424;
+          opacity: 0.35;
+        }
+      }
+      & .email {
+        display: inline-block;
+        margin-right: 50px;
+        opacity: 0.25;
+        width: 232px;
+        height: 54px;
+        border: 1px solid #ffffff;
+        border-radius: 10px;
+        &::placeholder {
+          padding-left: 30px;
+          font-weight: 400;
+          font-size: 16px;
+          line-height: 120%;
+          text-transform: capitalize;
+          color: #4c2424;
+          opacity: 0.35;
+        }
+      }
+      & .address {
+        margin-top: 30px;
+        display: inline-block;
+        margin-right: 50px;
+        opacity: 0.25;
+        width: 100%;
+        height: 54px;
+        border: 1px solid #ffffff;
+        border-radius: 10px;
+        &::placeholder {
+          padding-left: 30px;
+          font-weight: 400;
+          font-size: 16px;
+          line-height: 120%;
+          text-transform: capitalize;
+          color: #4c2424;
+          opacity: 0.35;
+        }
+      }
+      & .paragraph {
+        display: inline-block;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 160%;
+        text-transform: capitalize;
+        color: #ffffff;
+      }
+      & .btn {
+        @include button-default;
+      }
+    }
+  }
+}
+
+// https://placehold.co/264x273
