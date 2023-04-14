@@ -65,7 +65,9 @@ body {
   font-weight: 400;
   font-size: 16px;
   color: rgb(255, 255, 255);
-  height: 1000vh;
+}
+body a {
+  text-decoration: none;
 }
 
 .hero__area {
@@ -262,6 +264,7 @@ body {
 .abouts {
   display: flex;
   align-items: center;
+  justify-content: center;
   margin-bottom: 130px;
 }
 .abouts .abouts__left {
@@ -352,7 +355,6 @@ body {
 }
 
 .our-product {
-  border: 1px solid red;
   margin-bottom: 130px;
 }
 .our-product .product-wrapper {
@@ -555,26 +557,45 @@ body {
 
 .cta {
   display: flex;
+  margin-bottom: 130px;
 }
 .cta .cta-left {
+  position: relative;
   width: 492px;
   height: 549px;
+  z-index: 1;
+}
+.cta .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(47, 47, 47, 0.6);
+  border-radius: 10px 0px 0px 10px;
+  z-index: 2;
 }
 .cta .cta-right {
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
   width: 654px;
   height: 549px;
-  border: 1px solid red;
-  background-color: grey;
+  border-radius: 0 10px 10px 0;
+  background: rgba(47, 47, 47, 0.95) url("/cta/cta_right.png") no-repeat center;
+}
+.cta .cta-right .overlay {
+  position: absolute;
+  background: rgba(47, 47, 47, 0.95);
+  box-shadow: 0px 0px 30px 4px rgba(232, 232, 232, 0.4);
+  border-radius: 0 10px 10px 0;
 }
 .cta .cta-right .cta-right-wrapper {
   width: 514px;
-  border: 1px solid red;
+  z-index: 3;
 }
 .cta .cta-right .cta-right-wrapper .heading {
-  border: 1px solid red;
   font-weight: 700;
   font-size: 31px;
   line-height: 140%;
@@ -584,12 +605,13 @@ body {
 }
 .cta .cta-right .cta-right-wrapper .name {
   display: inline-block;
-  margin-right: 50px;
   opacity: 0.25;
   width: 232px;
   height: 54px;
-  border: 1px solid #ffffff;
+  border: 1px solid white;
   border-radius: 10px;
+  color: white;
+  background-color: inherit;
 }
 .cta .cta-right .cta-right-wrapper .name::placeholder {
   padding-left: 30px;
@@ -597,16 +619,25 @@ body {
   font-size: 16px;
   line-height: 120%;
   text-transform: capitalize;
-  color: #4c2424;
+  color: #ffffff;
   opacity: 0.35;
+}
+.cta .cta-right .cta-right-wrapper .name:focus {
+  outline: 2px solid rgb(255, 255, 255);
+}
+.cta .cta-right .cta-right-wrapper .name:valid {
+  color: white;
+  opacity: 0.8;
+  border: 1px solid rgba(255, 255, 255, 0.532);
 }
 .cta .cta-right .cta-right-wrapper .email {
   display: inline-block;
-  margin-right: 50px;
+  margin-left: 43px;
   opacity: 0.25;
   width: 232px;
   height: 54px;
-  border: 1px solid #ffffff;
+  border: 1px solid white;
+  background-color: inherit;
   border-radius: 10px;
 }
 .cta .cta-right .cta-right-wrapper .email::placeholder {
@@ -615,8 +646,16 @@ body {
   font-size: 16px;
   line-height: 120%;
   text-transform: capitalize;
-  color: #4c2424;
+  color: #ffffff;
   opacity: 0.35;
+}
+.cta .cta-right .cta-right-wrapper .email:focus {
+  outline: 2px solid rgb(255, 255, 255);
+}
+.cta .cta-right .cta-right-wrapper .email:valid {
+  color: white;
+  opacity: 0.8;
+  border: 1px solid rgba(255, 255, 255, 0.532);
 }
 .cta .cta-right .cta-right-wrapper .address {
   margin-top: 30px;
@@ -625,7 +664,9 @@ body {
   opacity: 0.25;
   width: 100%;
   height: 54px;
+  color: rgb(255, 255, 255);
   border: 1px solid #ffffff;
+  background-color: inherit;
   border-radius: 10px;
 }
 .cta .cta-right .cta-right-wrapper .address::placeholder {
@@ -634,16 +675,31 @@ body {
   font-size: 16px;
   line-height: 120%;
   text-transform: capitalize;
-  color: #4c2424;
-  opacity: 0.35;
+  color: rgb(255, 255, 255);
+  opacity: 1;
 }
-.cta .cta-right .cta-right-wrapper .paragraph {
+.cta .cta-right .cta-right-wrapper .address:focus {
+  outline: 2px solid rgb(255, 255, 255);
+}
+.cta .cta-right .cta-right-wrapper .address:valid {
+  color: white;
+  opacity: 0.8;
+  border: 1px solid rgba(255, 255, 255, 0.532);
+}
+.cta .cta-right .cta-right-wrapper .label {
   display: inline-block;
   font-weight: 400;
   font-size: 16px;
-  line-height: 160%;
+  line-height: 120%;
   text-transform: capitalize;
   color: #ffffff;
+  opacity: 0.35;
+  cursor: pointer;
+}
+.cta .cta-right .cta-right-wrapper .checkbox {
+  display: inline-block;
+  margin-top: 30px;
+  cursor: pointer;
 }
 .cta .cta-right .cta-right-wrapper .btn {
   display: flex;
@@ -665,8 +721,184 @@ body {
   color: #ffffff;
   opacity: 1;
   cursor: pointer;
+  margin-left: 50px;
+  margin-top: 30px;
+  display: inline-block;
 }
 .cta .cta-right .cta-right-wrapper .btn:hover {
+  background-color: #d88a02;
+}
+.cta .cta-right .cta-right-wrapper .btn:focus {
+  outline: 2px solid rgb(255, 255, 255);
+}
+
+.socials {
+  display: flex;
+  justify-content: space-evenly;
+  margin-bottom: 130px;
+}
+
+footer {
+  background: rgba(47, 47, 47, 0.92) url("/footer/Untitled design.png") no-repeat center;
+  background-size: cover;
+}
+footer .footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-direction: row;
+  width: 100%;
+  height: 368px;
+}
+footer .footer .bag {
+  margin-bottom: 20px;
+}
+footer .footer .paragraph {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 160%;
+  text-transform: capitalize;
+  color: #ffffff;
+  color: #ffffff;
+  opacity: 0.7;
+  max-width: 224px;
+}
+footer .footer .logo {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 160%;
+  text-transform: capitalize;
+  color: #ffffff;
+  color: #ffffff;
+  opacity: 0.7;
+}
+footer .footer .special-categories {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+footer .footer .special-categories .footer-subheader {
+  margin-bottom: 20px;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 150%;
+  text-transform: capitalize;
+  color: #ffffff;
+}
+footer .footer .special-categories ul,
+footer .footer .special-categories a {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 160%;
+  text-transform: capitalize;
+  color: #ffffff;
+  color: #ffffff;
+  opacity: 0.7;
+  color: white;
+  list-style-type: none;
+}
+footer .footer .special-categories li {
+  margin-bottom: 10px;
+}
+footer .footer .special-categories a:hover {
+  color: rgb(206, 201, 201);
+}
+footer .footer .contact-us {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+footer .footer .contact-us .footer-subheader {
+  margin-bottom: 20px;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 150%;
+  text-transform: capitalize;
+  color: #ffffff;
+}
+footer .footer .contact-us ul,
+footer .footer .contact-us a {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 160%;
+  text-transform: capitalize;
+  color: #ffffff;
+  color: #ffffff;
+  opacity: 0.7;
+  color: white;
+  list-style-type: none;
+}
+footer .footer .contact-us li {
+  margin-bottom: 10px;
+}
+footer .footer .contact-us a:hover {
+  color: rgb(206, 201, 201);
+}
+footer .footer .news-letter {
+  display: flex;
+  flex-direction: column;
+}
+footer .footer .news-letter .footer-subheader {
+  margin-bottom: 20px;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 150%;
+  text-transform: capitalize;
+  color: #ffffff;
+}
+footer .footer .news-letter input {
+  margin-bottom: 27px;
+  display: inline-block;
+  opacity: 0.25;
+  width: 232px;
+  height: 54px;
+  border: 1px solid white;
+  background-color: inherit;
+  border-radius: 10px;
+}
+footer .footer .news-letter input::placeholder {
+  padding-left: 30px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 120%;
+  text-transform: capitalize;
+  color: #ffffff;
+  opacity: 0.35;
+}
+footer .footer .news-letter input:focus {
+  outline: 2px solid rgb(255, 255, 255);
+}
+footer .footer .news-letter input:valid {
+  color: white;
+  opacity: 0.8;
+  border: 1px solid rgba(255, 255, 255, 0.532);
+}
+footer .footer button {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 15px 30px;
+  gap: 10px;
+  width: 141px;
+  height: 49px;
+  left: 1233px;
+  top: 32px;
+  border: none;
+  background: #f59b00;
+  border-radius: 5px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 120%;
+  color: #ffffff;
+  opacity: 1;
+  cursor: pointer;
+  width: 120px;
+  height: 39px;
+}
+footer .footer button:hover {
   background-color: #d88a02;
 }
 

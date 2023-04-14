@@ -153,7 +153,8 @@
       <div class="container">
         <div class="cta">
           <div class="cta-left">
-            <img src="https://placehold.co/492x549" alt="" />
+            <img src="/cta/cta_left.png" alt="" />
+            <div class="overlay"></div>
           </div>
           <div class="cta-right">
             <div class="cta-right-wrapper">
@@ -188,15 +189,84 @@
                   name="address"
                   required
                 />
-                <input type="checkbox" />
-                <p class="paragraph">Lorem ipsum dolor sit amet.</p>
+                <input type="checkbox" class="checkbox" id="checkbox" />
+                <label class="label" for="checkbox"
+                  >Lorem ipsum dolor sit amet.</label
+                >
 
                 <button class="btn">Join Now</button>
               </form>
             </div>
+            <div class="overlay"></div>
           </div>
         </div>
       </div>
     </section>
+
+    <!-- socials -->
+    <section>
+      <div class="container">
+        <div class="socials">
+          <div>
+            <img src="/social_proof/Company logo-1.png" alt="company 1" />
+          </div>
+          <div>
+            <img src="/social_proof/Company logo-2.png" alt="company 2" />
+          </div>
+          <div>
+            <img src="/social_proof/Company logo-3.png" alt="company 3" />
+          </div>
+          <div>
+            <img src="/social_proof/Company logo.png" alt="company 4" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- footer -->
+    <footer>
+      <div class="container">
+        <div class="footer">
+          <div class="logo">
+            <img class="bag" src="bag.png" alt="Logo" />
+            <p class="paragraph">
+              Lorem ipsum dolor sit amet consectetur adipiscing sed do eiusmod.
+            </p>
+          </div>
+          <div class="special-categories">
+            <h6 class="footer-subheader">special catagories</h6>
+            <ul>
+              <li><a href="#">water resistant</a></li>
+              <li><a href="#">charging system</a></li>
+              <li><a href="#">artificial leather</a></li>
+            </ul>
+          </div>
+          <div class="contact-us">
+            <h6 class="footer-subheader">contact us</h6>
+            <ul>
+              <li><a href="">(808) 555-0111</a></li>
+              <li><a href="">michelle.rivera@example.com</a></li>
+              <li></li>
+              <li><a href="">http://www.codehow.com</a></li>
+              <li></li>
+            </ul>
+          </div>
+          <div class="news-letter">
+            <h6 class="footer-subheader">news letter</h6>
+            <form action="/submit-form" method="post">
+              <input
+                placeholder="Enter Your Email"
+                class="email"
+                type="email"
+                id="email"
+                name="email"
+                required
+              />
+            </form>
+            <button class="btn">Subscribe</button>
+          </div>
+        </div>
+      </div>
+    </footer>
   </body>
 </html>
