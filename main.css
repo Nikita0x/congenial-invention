@@ -629,6 +629,7 @@ body a {
   color: rgb(255, 255, 255);
   opacity: 0.8;
   border: 1px solid rgba(255, 255, 255, 0.532);
+  text-indent: 30px;
 }
 .cta .cta-right .cta-right-wrapper .email {
   display: inline-block;
@@ -657,6 +658,7 @@ body a {
   color: rgb(255, 255, 255);
   opacity: 0.8;
   border: 1px solid rgba(255, 255, 255, 0.532);
+  text-indent: 30px;
 }
 .cta .cta-right .cta-right-wrapper .address {
   margin-top: 30px;
@@ -686,6 +688,7 @@ body a {
   color: white;
   opacity: 0.8;
   border: 1px solid rgba(255, 255, 255, 0.532);
+  text-indent: 30px;
 }
 .cta .cta-right .cta-right-wrapper .label {
   display: inline-block;
@@ -758,7 +761,6 @@ footer .footer .paragraph {
   font-weight: 400;
   font-size: 16px;
   line-height: 160%;
-  text-transform: capitalize;
   color: #ffffff;
   color: #ffffff;
   opacity: 0.7;
@@ -768,7 +770,6 @@ footer .footer .logo {
   font-weight: 400;
   font-size: 16px;
   line-height: 160%;
-  text-transform: capitalize;
   color: #ffffff;
   color: #ffffff;
   opacity: 0.7;
@@ -792,7 +793,6 @@ footer .footer .special-categories a {
   font-weight: 400;
   font-size: 16px;
   line-height: 160%;
-  text-transform: capitalize;
   color: #ffffff;
   color: #ffffff;
   opacity: 0.7;
@@ -824,7 +824,6 @@ footer .footer .contact-us a {
   font-weight: 400;
   font-size: 16px;
   line-height: 160%;
-  text-transform: capitalize;
   color: #ffffff;
   color: #ffffff;
   opacity: 0.7;
@@ -875,6 +874,7 @@ footer .footer .news-letter input:valid {
   color: white;
   opacity: 0.8;
   border: 1px solid rgba(255, 255, 255, 0.532);
+  text-indent: 30px;
 }
 footer .footer button {
   display: flex;
@@ -974,6 +974,7 @@ footer .footer button:hover {
   .hero__area-content .hero__area-left {
     position: relative;
     width: 312px;
+    margin-top: 183px;
   }
   .hero__area-content .hero__area-left .subheading {
     font-weight: 500;
@@ -1039,9 +1040,11 @@ footer .footer button:hover {
   }
   .hero__area-content .hero__area-right .images {
     background: url("/background image.png") no-repeat;
+    background-size: 20rem auto;
     position: absolute;
-    width: 100px;
-    height: 200px;
+    width: 15rem;
+    left: -170px;
+    top: -27px;
   }
   .feature {
     margin-top: 130px;
@@ -1051,9 +1054,15 @@ footer .footer button:hover {
     flex-direction: column;
     position: relative;
     margin-bottom: 130px;
-    justify-content: space-between;
+    justify-content: center;
+    align-items: center;
   }
   .feature .container .items .item {
+    display: inherit;
+    align-items: inherit;
+    flex-direction: inherit;
+    justify-content: inherit;
+    width: 50%;
     transition: border 0.5s ease-in-out;
   }
   .feature .container .items .item p {
@@ -1065,7 +1074,8 @@ footer .footer button:hover {
     text-transform: capitalize;
     color: #2f2f2f;
     opacity: 0.8;
-    margin-bottom: 85px;
+    margin-bottom: 34px;
+    margin-top: 20px;
   }
   .feature .container .items .item:hover {
     cursor: pointer;
@@ -1104,49 +1114,46 @@ footer .footer button:hover {
   .abouts {
     display: flex;
     align-items: center;
+    justify-content: center;
+    margin-bottom: 130px;
     flex-direction: column;
   }
   .abouts .abouts__left {
     position: relative;
-    width: 100%;
-    background: url("./abouts/Vector.png") no-repeat center center;
     display: inherit;
-    background-size: auto auto;
+    justify-content: inherit;
+    width: 400px;
+    height: 400px;
+    background: url("./abouts/Vector.png") center center;
+    align-items: center;
   }
   .abouts .abouts__left .front {
     position: absolute;
-    width: 344px;
-    height: 492px;
-    left: 322px;
-    transform: scale(1.2);
-    top: 95px;
-    z-index: 1;
+    width: 60%;
+    left: 20%;
     filter: drop-shadow(0px 10px 45px rgba(47, 47, 47, 0.15));
   }
   .abouts .abouts__left .back1 {
     position: absolute;
-    width: 238px;
-    top: 25%;
-    left: 575px;
-    height: 343px;
-    z-index: 0;
+    left: 60%;
+    width: 40%;
   }
   .abouts .abouts__left .back2 {
     position: absolute;
-    width: 238px;
-    top: 25%;
-    left: 199px;
-    height: 343px;
-    z-index: 0;
+    left: 0;
+    width: 40%;
   }
   .abouts .abouts__right {
-    margin-left: 83px;
-    width: 460px;
-    height: 355px;
+    margin-left: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
   }
   .abouts .abouts__right .subheading {
     font-weight: 500;
-    font-size: 20px;
+    font-size: 15px;
     line-height: 150%;
     text-transform: uppercase;
     color: #f59b00;
@@ -1155,13 +1162,13 @@ footer .footer button:hover {
   .abouts .abouts__right .heading {
     margin-top: 10px;
     font-weight: 700;
-    font-size: 31px;
+    font-size: 25px;
     line-height: 140%;
     text-transform: capitalize;
     color: #2f2f2f;
   }
   .abouts .abouts__right .paragraph {
-    font-size: 16px;
+    font-size: 14px;
     margin-top: 25px;
     line-height: 160%;
     text-transform: capitalize;
@@ -1208,8 +1215,7 @@ footer .footer button:hover {
     line-height: 140%;
     text-transform: capitalize;
     color: #2f2f2f;
-    margin-top: 140px;
-    margin-bottom: 60px;
+    margin-bottom: 30px;
     align-items: inherit;
     display: flex;
     flex-direction: column;
@@ -1399,7 +1405,7 @@ footer .footer button:hover {
   .cta .cta-left {
     position: relative;
     margin-bottom: 20px;
-    width: 320px;
+    width: 100%;
     height: auto;
     z-index: 1;
   }
@@ -1419,7 +1425,7 @@ footer .footer button:hover {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 320px;
+    width: 100%;
     height: auto;
     border-radius: 10px 10px 10px 10px;
     background: rgba(47, 47, 47, 0.95) url("/cta/cta_right.png") no-repeat center;
@@ -1577,10 +1583,10 @@ footer .footer button:hover {
     outline: 2px solid rgb(255, 255, 255);
   }
   .socials {
-    max-width: 320px;
+    max-width: 100%;
     display: flex;
-    border: 1px solid red;
     flex-direction: column;
+    align-items: center;
     justify-content: space-evenly;
     margin: 10px 0;
   }
@@ -1597,7 +1603,7 @@ footer .footer button:hover {
     align-items: center;
     justify-content: space-evenly;
     flex-direction: column;
-    width: 300px;
+    width: 100%;
     height: auto;
   }
   footer .footer .bag {
@@ -1609,7 +1615,6 @@ footer .footer button:hover {
     font-weight: 400;
     font-size: 16px;
     line-height: 160%;
-    text-transform: capitalize;
     color: #ffffff;
     color: #ffffff;
     opacity: 0.7;
@@ -1620,7 +1625,6 @@ footer .footer button:hover {
     font-weight: 400;
     font-size: 16px;
     line-height: 160%;
-    text-transform: capitalize;
     color: #ffffff;
     color: #ffffff;
     opacity: 0.7;
@@ -1645,7 +1649,6 @@ footer .footer button:hover {
     font-weight: 400;
     font-size: 16px;
     line-height: 160%;
-    text-transform: capitalize;
     color: #ffffff;
     color: #ffffff;
     opacity: 0.7;
@@ -1675,13 +1678,6 @@ footer .footer button:hover {
   }
   footer .footer .contact-us ul,
   footer .footer .contact-us a {
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 160%;
-    text-transform: capitalize;
-    color: #ffffff;
-    color: #ffffff;
-    opacity: 0.7;
     color: white;
     list-style-type: none;
   }
