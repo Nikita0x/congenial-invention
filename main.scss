@@ -52,6 +52,10 @@ body {
     text-decoration: none;
   }
 }
+html,
+body {
+  overflow-x: hidden;
+}
 
 .hero__area {
   background-color: #2f2f2f;
