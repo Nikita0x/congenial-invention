@@ -827,7 +827,7 @@ footer {
 }
 
 #scroll-up-btn {
-  display: block;
+  display: none;
   position: fixed;
   bottom: 0;
   right: 20px;
@@ -835,7 +835,7 @@ footer {
   height: 50px;
   border: none;
   border-radius: 10px;
-  background-color: #333;
+  background-color: #ec0808;
   color: #fff;
   font-size: 18px;
   text-align: center;
